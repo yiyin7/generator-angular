@@ -2,7 +2,7 @@
 var util = require('util'),
     path = require('path'),
     grunt = require('grunt'),
-    yeoman = require('../../../'),
+    yeoman = require('yeoman'),
     customConfig = require(process.cwd()+'/customConfig.json');
 
 module.exports = Generator;
