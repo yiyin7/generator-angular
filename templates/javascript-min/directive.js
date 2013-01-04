@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('<%= grunt.util._.camelize(appname) %>App')
-  .directive('<%= _.camelize(name) %>', [function() {
+angular.module('<%= grunt.util._.camelize(appname) %>App.directives')
+.directive('<%= _.camelize(name) %>', [function() {
     return {
-      template: '<div></div>',
-      restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the <%= _.camelize(name) %> directive');
-      }
+        restrict: 'E',
+        template: '<div></div>',
+        link: function postLink(scope, element, attrs) {
+            element.text('this is the <%= _.camelize(name) %> directive');
+        }
     };
-  }]);
+}]);
