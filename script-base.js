@@ -1,13 +1,16 @@
-  
+
 var util = require('util'),
     path = require('path'),
     grunt = require('grunt'),
-    yeoman = require('../../../');
+    yeoman = require('../../../'),
+    customConfig = require(process.cwd()+'/customConfig.json');
 
 module.exports = Generator;
 
 function Generator() {
   yeoman.generators.NamedBase.apply(this, arguments);
+  // this.appname = path.basename(process.cwd());
+  this.appname = customConfig.appName;
 
 
   this.option('coffee');
