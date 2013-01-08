@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('<%= grunt.util._.camelize(appname) %>App.directives')
-.directive('<%= _.camelize(name) %>', [function() {
+myApp.directive('<%= _.camelize(name) %>', [function() {
     return {
         restrict: 'E',
         template: '<div></div>',
